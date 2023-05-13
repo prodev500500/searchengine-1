@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Website</title>
+    <script>
+        function updateTitle() {
+          var userInput = document.getElementById("inputBox").value;
+          document.title = userInput + " - My Website";
+        }
+      </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
+    <style>
+        /* Global styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f2f2f2;
+            color: #333;
+            line-height: 1.5;
+        }
+
+        /* Header styles */
+        header {
+            height: 80px;
+            background-color: #fff;
+            box-shadow: 0 1px 6px rgba(32,33,36,0.28);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 16px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 3;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #1a73e8;
+            text-decoration: none;
+            margin-right: 16px;
+        }
+
+        .menu {
+            display: flex;
+            align-items: center;
+        }
+
+        .menu-item {
+            margin-right: 16px;
+        }
+
+        .menu-link {
+            font-size: 16px;
+            color: #333;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .menu-link:hover {
+            color: #1a73e8;
+        }
+
+        /* Banner styles */
+        .banner {
+            height: 400px;
+            background-image: url('https://cdn.pixabay.com/photo/2020/06/01/06/34/starry-sky-5240809_1280.jpg');
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin-top: 80px;
+        }
+
+        .banner-heading {
+            font-size: 48px;
+            font-weight: bold;
+            color: #fff;
+            text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+            margin-bottom: 16px;
+        }
+
+        .banner-subheading {
+            font-size: 24px;
+            color: #fff;
+            text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+            margin-bottom: 32px;
+        }
+
+        /* Search box styles */
+        .search-box {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 80px;
+        }
+
+        .search-input {
+            width: 600px;
+            max-width: 100%;
+            padding: 16px;
+            border: none;
+            border-radius: 4px 0 0 4px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .search-button {
+        background-color: #1a73e8;
+        color: #fff;
+        padding: 16px;
+        border: none;
+        border-radius: 0 4px 4px 0;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .search-button:hover {
+        background-color: #0d47a1;
+    }
+
+    /* Main content styles */
+    .content {
+        margin: 0 auto;
+        max-width: 1200px;
+        padding: 80px 16px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .card {
+        width: calc(33.33% - 16px);
+        margin-bottom: 32px;
+        background-color: #fff;
+        box-shadow: 0 1px 6px rgba(32,33,36,0.28);
+        border-radius: 4px;
+        overflow: hidden;
+    }
+
+    .card-image {
+        height: 200px;
+        background-image: url('https://cdn.pixabay.com/photo/2018/03/21/23/39/rose-3257467_1280.jpg');
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .card-body {
+        padding: 16px;
+    }
+
+    .card-title {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 8px;
+    }
+
+    .card-text {
+        font-size: 16px;
+        margin-bottom: 16px;
+    }
+
+    .card-link {
+        display: block;
+        font-size: 16px;
+        color: #1a73e8;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    .card-link:hover {
+        text-decoration: underline;
+    }
+
+    /* Footer styles */
+    footer {
+        background-color: #fff;
+        border-top: 1px solid #e0e0e0;
+        padding: 16px;
+        text-align: center;
+    }
+
+    .footer-text {
+        font-size: 14px;
+        color: #666;
+    }
+
+</style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <a href="#" class="logo">Search Engine</a>
+    </header>
+<!-- Banner -->
+<section class="banner">
+    <div class="banner-content">
+        <h1 class="banner-heading">Welcome to Search</h1>
+        <p class="banner-subheading">The best place to find what you're looking for</p>
+        
+<!-- Programmable search engine code -->
+<script async src="https://cse.google.com/cse.js?cx=a1baff5d35f074652">
+</script>
+<div class="gcse-search"></div>
+<br>
+<label for="inputBox">Enter some text:</label>
+  <input type="text" id="inputBox" oninput="updateTitle()">
+
+</body>
+</html>
